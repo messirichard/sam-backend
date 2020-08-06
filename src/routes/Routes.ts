@@ -1,23 +1,32 @@
-import {Request, Response} from "express";
-import Api from "../controller/ApiController";
-class Routes {
-    private api_controller: Api;
+import { Router } from "express";
+const router = Router();
 
-    constructor() {
-        this.api_controller = new Api();
-    }
+import {
+  getUsers,
+  getUser,
+  createUser,
+  updateUser,
+  deleteUser
+} from "../controller/UserController";
 
-    public routes(app): void {
-        app.route("/").get((request: Request, response: Response) => {
-            response.status(200).send({
-                message: "GET request successfully.",
-            });
-        });
-        app.route("/api")
-            .get(this.api_controller.getAllApi);
-    }
-}
+import {
+  getApis,
+  getApi,
+  createApi,
+  updateApi,
+  deleteApi
+} from "../controller/ApiController";
 
-export {
-    Routes
-};
+router.get("/users", getUsers);
+router.get("/users/:id", getUser);
+router.post("/users", createUser);
+router.put("/users/:id", updateUser);
+router.delete("/users/:id", deleteUser);
+
+router.get("/api", getApis);
+router.get("/api/:id", getApi);
+router.post("/api", createApi);
+router.put("/api/:id", updateApi);
+router.delete("/api/:id", deleteApi);
+
+export default router;
