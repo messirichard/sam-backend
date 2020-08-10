@@ -9,13 +9,13 @@ module.exports = {
     "database": process.env.DB_NAME,
     "entities": ["dist/entity/**/*.js"],
     "subscribers": [
-        "subscriber/*.js"
+        "src/subscriber/*.js"
     ],
     "entitySchemas": [
         "schema/*.json"
     ],
     "migrations": [
-        "migration/*.js"
+        "src/migration/*.js"
     ],
     "cli": {
         "entitiesDir": "entity",
