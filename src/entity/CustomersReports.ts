@@ -4,7 +4,7 @@ import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 @Index("customersreports_reportid", ["reportId"], {})
 @Entity("customers_reports", { schema: "public" })
 export class CustomersReports {
-  @PrimaryGeneratedColumn({type: "bigint", name: "customer_id" })
+  @PrimaryGeneratedColumn({ type: "bigint", name: "customer_id" })
   customerId: string;
 
   @Column("bigint", { name: "report_id" })

@@ -23,5 +23,5 @@ module.exports = {
         "subscribersDir": "subscriber"
     },
     "logging": true,
-    "synchronize": true
+    "synchronize": false
 }
