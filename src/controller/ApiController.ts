@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
-import { Api } from "../entities/Api";
+import { Api } from "../entity/Api";
 
 export const getApis = async (
   req: Request,

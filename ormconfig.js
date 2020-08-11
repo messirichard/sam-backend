@@ -22,6 +22,6 @@ module.exports = {
         "migrationsDir": "migration",
         "subscribersDir": "subscriber"
     },
-    "logging": false,
+    "logging": true,
     "synchronize": true
 }
