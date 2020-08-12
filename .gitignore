@@ -36,7 +36,7 @@ build/Release
 node_modules/
 dist/
 jspm_packages/
-
+.env
 # TypeScript v1 declaration files
 typings/
 
