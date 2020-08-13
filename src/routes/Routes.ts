@@ -2,7 +2,7 @@ import { Router } from "express";
 const router = Router();
 
 import {
-  getUsers,
+  getAllUser,
   getUser,
   createUser,
   updateUser,
@@ -10,7 +10,7 @@ import {
 } from "../controller/UserController";
 
 import {
-  getApis,
+  getAllApi,
   getApi,
   createApi,
   updateApi,
@@ -18,26 +18,26 @@ import {
 } from "../controller/ApiController";
 
 import {
-  getCitys,
+  getAllCity,
   getCity,
   createCity,
   updateCity,
   deleteCity
 } from "../controller/CityController";
 
-router.get("/users", getUsers);
+router.get("/users", getAllUser);
 router.get("/users/:id", getUser);
 router.post("/users", createUser);
 router.put("/users/:id", updateUser);
 router.delete("/users/:id", deleteUser);
 
-router.get("/api", getApis);
+router.get("/api", getAllApi);
 router.get("/api/:id", getApi);
 router.post("/api", createApi);
 router.put("/api/:id", updateApi);
 router.delete("/api/:id", deleteApi);
 
-router.get("/city", getCitys);
+router.get("/city", getAllCity);
 router.get("/city/:id", getCity);
 router.post("/city", createCity);
 router.put("/city/:id", updateCity);

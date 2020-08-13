@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { City } from "../entity/City";
 
-export const getCitys = async (
+export const getAllCity = async (
   req: Request,
   res: Response
 ): Promise<Response> => {
